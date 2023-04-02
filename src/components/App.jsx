@@ -34,10 +34,6 @@ export class App extends Component {
         images: [...images, ...hits],
         page: page + 1,
       }));
-
-      if (page !== 1) {
-        // scrollOnLoad();
-      }
     } catch (error) {
       this.setState({ error: 'Oops something went wrong...' });
     } finally {
@@ -62,11 +58,12 @@ export class App extends Component {
   };
 
   render() {
-    const { images, isShowModal, modalImage, isLoading } = this.state;
+    const { images, isShowModal, modalImage, isLoading, error } = this.state;
     const lengthImages = images.length >= 12;
     return (
       <Container>
         <Search createSearchText={this.createSearchText} />
+        {error}
         <ImageGallery items={images} getItemClick={this.imageClick} />
         {isLoading && <Loader />}
         {lengthImages && (

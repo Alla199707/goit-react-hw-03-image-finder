@@ -35,8 +35,6 @@ export const Button = styled.button`
   }
 `;
 
-// background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
-
 export const Form = styled.form`
   display: flex;
   align-items: center;
