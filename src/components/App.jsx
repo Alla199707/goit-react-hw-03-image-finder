@@ -45,8 +45,6 @@ export class App extends Component {
     this.setState({ images: [], searchText, page: 1 });
   };
 
-  onLoadMore = () => {};
-
   imageClick = imageUrl => {
     this.setState({ modalImage: imageUrl, isShowModal: true });
   };
