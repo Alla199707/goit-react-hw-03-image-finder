@@ -9,11 +9,9 @@ const ImageGalleryItem = ({
     getItemClick(largeImageURL);
   };
   return (
-    <>
-      <GalleryItem>
-        <GalleryImg src={webformatURL} alt={tags} onClick={onClickImage} />
-      </GalleryItem>
-    </>
+    <GalleryItem>
+      <GalleryImg src={webformatURL} alt={tags} onClick={onClickImage} />
+    </GalleryItem>
   );
 };
 

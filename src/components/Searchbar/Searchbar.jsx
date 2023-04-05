@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { Button, Form, Header, Input, Label } from './Searchbar.styled';
@@ -45,5 +46,9 @@ class Search extends Component {
     );
   }
 }
+
+Search.propTypes = {
+  createSearchText: PropTypes.func.isRequired,
+};
 
 export default Search;
